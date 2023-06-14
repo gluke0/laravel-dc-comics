@@ -11,7 +11,7 @@
 
             @foreach ( $comics as $elem )
             <div class="poster col-12 col-md-2 col-lg-2">
-                <a class="text-decoration-none" {{ route('comics.show', ['comic' => $elem->id]) }}>
+                <a class="text-decoration-none" href="{{ route('comics.show', ['comic' => $elem->id]) }}">
                     <img src="{{$elem['thumb']}}" alt="poster">
                     <h6 class="text-uppercase mt-3">{{$elem['title']}}</h6>
                 </a>
