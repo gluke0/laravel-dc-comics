@@ -1,3 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 @import './partials/header.scss';
+@import './partials/main.scss';
 @import './partials/footer.scss';
+
+main{
+    z-index: 1;
+    position: relative;
+    background-color: white;
+}

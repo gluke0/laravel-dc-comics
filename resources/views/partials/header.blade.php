@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav me-3">
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">characters</a>
+                        <a class="nav-link text-uppercase" href="{{ route('home') }}">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">comics</a>
+                        <a class="nav-link text-uppercase" href="{{ route('comics.index') }}">comics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-uppercase" href="#">movies</a>
