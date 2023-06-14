@@ -1,0 +1,68 @@
+footer{
+    background-image: url('../img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2rem;
+}
+        
+.list{
+    width: 60%;
+    margin: 2rem 0;
+}
+
+.footmenu{
+    padding: 1rem 2rem 0 0;
+    h2{
+        padding-bottom: 0.5rem;
+        color: white;
+    }
+    ul{
+        line-height: 1.5rem;
+        padding: 0;
+        li{
+            list-style: none;
+            a{
+                color: gray;
+                text-decoration: none;
+            }
+        }  
+    }
+}
+    
+.bg-logo{
+    position: absolute;
+    right: 0;
+    bottom: -90px;
+}
+    
+.social{
+        height: 6.5rem;
+        background-color: rgb(48, 48, 48);
+        z-index: 1;
+        position: relative;
+.footer-down{
+        height: 100%;
+        button{
+            padding: 1rem;
+            background-color: rgb(48, 48, 48);;
+            border: 0.3rem solid rgb(2, 130, 249);
+            color:white
+        }
+        .social-buttons{
+            color: white;
+            h4{
+                color: rgb(2, 130, 249);
+                padding-right: 1rem;
+                font-weight: bold;
+                }
+            ul{
+                display: flex;
+                list-style-type: none;
+                padding: 1rem;
+                li{
+                    margin: 0 0.6rem;
+                }
+            }
+        }
+    }
+}
