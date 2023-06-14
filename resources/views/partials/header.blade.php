@@ -28,7 +28,7 @@
                         <a class="nav-link text-uppercase" href="{{ route('comics.index') }}">comics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">movies</a>
+                        <a class="nav-link text-uppercase" href="{{ route('comics.create') }}">create comic</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-uppercase" href="#">tv</a>
