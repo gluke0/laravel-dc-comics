@@ -9,12 +9,12 @@
     <div class="container poster-section p-5">
         <div class="row">
 
-            {{-- @foreach ( $comics as $elem )
+            @foreach ( $comics as $elem )
             <div class="poster col-12 col-md-2 col-lg-2">
                 <img src="{{$elem['thumb']}}" alt="poster">
-                <h6 class="text-uppercase mt-3">{{$elem['series']}}</h6>
+                <h6 class="text-uppercase mt-3">{{$elem['title']}}</h6>
             </div>
-            @endforeach --}}
+            @endforeach
 
         </div>
         <span id="button" class="text-uppercase">create your comic</span>
