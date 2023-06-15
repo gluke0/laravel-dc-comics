@@ -36,6 +36,9 @@
                 <span class="text-capitalize">{{ $comics['price'] }}</span>
             </div>
             <div class="mt-5">
+                <a href=" {{ route( 'comics.edit', $comics ) }} " class="btn btn-warning text-danger text-uppercase"><strong> edit</strong></a>
+            </div>
+            <div class="mt-2">
                 <form action="{{route('comics.destroy', $comics)}}" method="POST">
 
                 @csrf
