@@ -13,9 +13,15 @@
             <div class="poster col-12 col-md-2 col-lg-2">
                 <a class="text-decoration-none" href="{{ route('comics.show', ['comic' => $elem->id]) }}">
                     <img src="{{$elem['thumb']}}" alt="poster">
-                    <h6 class="text-uppercase mt-3">{{$elem['title']}}</h6>
+                    <div class="titlebox">
+                        <h6 class="text-uppercase mt-3">{{$elem['title']}}</h6>
+                    </div>
                 </a>
+                <div class="my-4 d-flex justify-content-center">
+                    <a href=" {{ route( 'comics.edit', $elem ) }} " class="btn btn-warning text-danger text-uppercase"><strong> edit</strong></a>
+                </div>
             </div>
+
             @endforeach
 
         </div>
