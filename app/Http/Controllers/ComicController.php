@@ -82,7 +82,7 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $form_data = $request->all();
-        $comics->update($form_data);
+        $comic->update($form_data);
 
         return redirect()->route('comics.index');
     }
