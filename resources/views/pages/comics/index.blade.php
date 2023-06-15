@@ -17,15 +17,25 @@
                         <h6 class="text-uppercase mt-3">{{$elem['title']}}</h6>
                     </div>
                 </a>
-                <div class="my-4 d-flex justify-content-center">
+                <div class="mt-4 mb-2 d-flex justify-content-center">
                     <a href=" {{ route( 'comics.edit', $elem ) }} " class="btn btn-warning text-danger text-uppercase"><strong> edit</strong></a>
+                </div>
+                <div class="mb-4 d-flex justify-content-center">
+                    <form action="{{route('comics.destroy', $elem)}}" method="POST">
+    
+                    @csrf
+                    @method('DELETE')
+    
+                    <button type="submit" class="btn btn-danger text-uppercase text-warning"> <strong> delete </strong> </button>
+    
+                    </form>
                 </div>
             </div>
 
             @endforeach
 
         </div>
-        <span id="button" class="text-uppercase"><a class="text-uppercase text-white text-decoration-none" href="{{ route('comics.create') }}">create comic</a></span>
+        <button class="text-uppercase btn btn-primary"><a class="text-uppercase text-white text-decoration-none" href="{{ route('comics.create') }}">create comic</a></button>
     </div>
 </div>
 
