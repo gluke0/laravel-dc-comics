@@ -35,6 +35,16 @@
                 <span class="show-label"><strong> Price: </strong></span>
                 <span class="text-capitalize">{{ $comics['price'] }}</span>
             </div>
+            <div class="mt-5">
+                <form action="{{route('comics.destroy', $comics)}}" method="POST">
+
+                @csrf
+                @method('DELETE')
+
+                <button type="submit" class="btn btn-danger text-uppercase text-warning"> <strong> delete </strong> </button>
+
+                </form>
+            </div>
         </div> 
     </div>
 </div>
