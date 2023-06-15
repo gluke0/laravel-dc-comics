@@ -26,11 +26,14 @@
                     @csrf
                     @method('DELETE')
     
-                    <button type="submit" class="btn btn-danger text-uppercase text-warning"> <strong> delete </strong> </button>
+                    <button type="submit" class="btn btn-danger text-uppercase text-warning" onclick="return areYouSure()"> <strong> delete </strong> </button>
     
                     </form>
                 </div>
+
             </div>
+
+            
 
             @endforeach
 
@@ -38,5 +41,13 @@
         <button class="text-uppercase btn btn-primary"><a class="text-uppercase text-white text-decoration-none" href="{{ route('comics.create') }}">create comic</a></button>
     </div>
 </div>
+
+<script>
+
+    function areYouSure(){
+        return confirm("Are you sure you want to delete it?")
+    };
+
+</script>
 
 @endsection
