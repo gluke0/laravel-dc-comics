@@ -9,7 +9,16 @@
     <div class="container poster-section p-5">
 
         @if ( Session::has('success'))
-            <div class="alert text-white font-weight-bold bg-success text-uppercase">
+
+            <script>
+
+                setTimeout(function(){
+                    document.querySelector('.alert').style.display = 'none';
+                }, 3000);
+                
+            </script>
+
+            <div class="alert text-white font-weight-bold bg-success text-uppercase mb-5">
                 {!! Session::get('success') !!}
             </div>
         @endif
