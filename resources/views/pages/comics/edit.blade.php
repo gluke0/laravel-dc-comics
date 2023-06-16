@@ -22,7 +22,10 @@
 
             <div class="form-group mt-3">
                 <label for="input-title" class="form-label text-white">Title:</label>
-                <input type="text" id="input-title" class="form-control" name="title" placeholder="title" autofocus value="{{old('title') ?? $comic->title}}"> 
+                <input type="text" id="input-title" class="form-control @error('title') is-invalid @enderror" name="title" placeholder="title" autofocus value="{{old('title') ?? $comic->title}}"> 
+                @error('title')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group mt-3">
                 <label for="input-description" class="form-label text-white">Description:</label>
@@ -47,7 +50,10 @@
             </div>
             <div class="form-group mt-3 col-6">
                 <label for="input-type" class="form-label text-white">Type:</label>
-                <input type="text" id="input-type" class="form-control" name="type" placeholder="type" value="{{old('type') ?? $comic->type}}"> 
+                <input type="text" id="input-type" class="form-control @error('type') is-invalid @enderror" name="type" placeholder="type" value="{{old('type') ?? $comic->type}}">
+                @error('type')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror 
             </div>
             <button type="submit" class="btn btn-primary btn-outline-light my-4 col-2 mx-auto text-uppercase"><strong> edit </strong></button>
         </form>
