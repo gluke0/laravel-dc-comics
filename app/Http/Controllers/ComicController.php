@@ -43,7 +43,7 @@ class ComicController extends Controller
                 'title' => 'required'
             ],
             [
-                'title.requires'=>'Title can not be empty'
+                'title.required'=>'Title can not be empty / Il titolo non può essere vuoto'
             ]
 
         );
