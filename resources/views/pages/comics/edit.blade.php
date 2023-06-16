@@ -38,7 +38,10 @@
             </div>
             <div class="form-group mt-3 col-6">
                 <label for="input-price" class="form-label text-white">Price:</label>
-                <input type="text" id="input-price" class="form-control" name="price" placeholder="price" value="{{old('price') ?? $comic->price}}"> 
+                <input type="text" id="input-price" class="form-control @error('title') is-invalid @enderror" name="price" placeholder="price" value="{{old('price') ?? $comic->price}}">
+                @error('price')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror 
             </div>
             <div class="form-group mt-3 col-6">
                 <label for="input-series" class="form-label text-white">Series:</label>
