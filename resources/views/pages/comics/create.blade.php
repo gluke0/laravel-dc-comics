@@ -49,7 +49,10 @@
             </div>
             <div class="form-group mt-3 col-6">
                 <label for="input-type" class="form-label text-white">Type:</label>
-                <input type="text" id="input-type" class="form-control" name="type" placeholder="type"> 
+                <input type="text" id="input-type" class="form-control @error('type') is-invalid @enderror" name="type" placeholder="type">
+                @error('type')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror 
             </div>
             <button type="submit" class="btn btn-primary btn-outline-light my-4 col-2 mx-auto text-uppercase"><strong> create </strong></button>
         </form>

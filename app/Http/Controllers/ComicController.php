@@ -41,11 +41,13 @@ class ComicController extends Controller
         $request->validate(
             [
                 'title' => 'required|max:150|unique:comics',
+                'type' => 'min:3'
             ],
             [
                 'title.required' => 'Title can not be empty / Il titolo non può essere vuoto',
                 'title.max' => 'Title can be max 150 characters / Il titolo non può superare i 150 caratteri',
-                'title.unique' => 'Comic already in the database / Il fumetto è già presente nel database' 
+                'title.unique' => 'Comic already in the database / Il fumetto è già presente nel database',
+                'type.min' => 'Type must be longer than 2 characters / La tipologia deve essere più lunga di 2 caratteri'
             ]
 
         );
