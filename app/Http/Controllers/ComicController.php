@@ -60,7 +60,7 @@ class ComicController extends Controller
         $newComic->fill($form_data);
         $newComic->save();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('success', 'Comic has been added!');
     }
 
     /**
