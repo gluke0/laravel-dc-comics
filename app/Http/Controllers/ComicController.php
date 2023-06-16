@@ -116,7 +116,7 @@ class ComicController extends Controller
         $form_data = $request->all();
         $comic->update($form_data);
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('success', 'Comic has been modified!');
     }
 
     /**
@@ -129,6 +129,6 @@ class ComicController extends Controller
     {
         $comic->delete();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('success', 'Comic has been deleted!');
     }
 }

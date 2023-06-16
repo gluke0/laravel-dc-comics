@@ -9,7 +9,7 @@
     <div class="container poster-section p-5">
 
         @if ( Session::has('success'))
-            <div class="alert text-white bg-success text-uppercase">
+            <div class="alert text-white font-weight-bold bg-success text-uppercase">
                 {!! Session::get('success') !!}
             </div>
         @endif
