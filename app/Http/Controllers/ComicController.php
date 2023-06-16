@@ -40,21 +40,20 @@ class ComicController extends Controller
 
         $request->validate(
             [
-                'title' => 'required'
+                'title' => 'required|max:150|unique:comics',
             ],
             [
-                'title.required'=>'Title can not be empty / Il titolo non può essere vuoto'
+                'title.required' => 'Title can not be empty / Il titolo non può essere vuoto',
+                'title.max' => 'Title can be max 150 characters / Il titolo non può superare i 150 caratteri',
+                'title.unique' => 'Comic already in the database / Il fumetto è già presente nel database' 
             ]
 
         );
 
 
         $form_data = $request ->all();
-
         $newComic = new Comic();
-
         $newComic->fill($form_data);
-
         $newComic->save();
 
         return redirect()->route('comics.index');
