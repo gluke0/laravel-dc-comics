@@ -21,7 +21,10 @@
 
             <div class="form-group mt-3">
                 <label for="input-title" class="form-label text-white">Title:</label>
-                <input type="text" id="input-title" class="form-control" name="title" placeholder="title" autofocus> 
+                <input type="text" id="input-title" class="form-control @error('title') is-invalid @enderror" name="title" placeholder="title" autofocus>
+                @error('title')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group mt-3">
                 <label for="input-description" class="form-label text-white">Description:</label>

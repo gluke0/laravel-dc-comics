@@ -37,6 +37,18 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate(
+            [
+                'title' => 'required'
+            ],
+            [
+                'title.requires'=>'Title can not be empty'
+            ]
+
+        );
+
+
         $form_data = $request ->all();
 
         $newComic = new Comic();
